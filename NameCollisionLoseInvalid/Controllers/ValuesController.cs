@@ -16,7 +16,7 @@ namespace NameCollisionLoseInvalid.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public string Get([FromRoute] int id, [FromQuery(Name = "id")] string identifier)
         {
             return "value";
         }
